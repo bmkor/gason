@@ -1,0 +1,4 @@
+osx_image: xcode9.1
+language: swift
+xcode_project: gasonframework.xcodeproj
+xcode_scheme: gasonframewoekTestsScheme
