@@ -18,8 +18,10 @@ class gasonframeworkTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         // This may take a bit time to download.
         
-        let testURL = "https://raw.githubusercontent.com/Newbilius/big_json_import_demo/master/test_data/"
-        d = ["big.json","very_big.json","small.json"].flatMap({URL(string:testURL + $0)}).flatMap({try? Data(contentsOf: $0)})
+        let emptyJSON = "{}"
+        if let data = emptyJSON.data(using: String.Encoding.utf8){
+            d = [data]
+        }
     }
     
     override func tearDown() {
@@ -35,7 +37,7 @@ class gasonframeworkTests: XCTestCase {
                 do{
                     _ = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
                 }catch let e as NSError{
-                    print("baseline: \(e.localizedDescription)")
+                    print("error: \(e.localizedDescription)")
                 }
                 
             })
@@ -52,11 +54,44 @@ class gasonframeworkTests: XCTestCase {
                 do{
                     _ = try JSON(data)
                 }catch let e as NSError{
-                    print("baseline: \(e.localizedDescription)")
+                    print("error: \(e.localizedDescription)")
                 }
             })
         }
     }
+    var g:[String:NSObject]?
+    var crashed:[URL]?
+    func testCrashed(){
+        if let url = Bundle(for:type(of: self)).url(forResource: "jsonlist", withExtension: "json"), let casepaths = try? Data(contentsOf: url){
+            g = try? JSONSerialization.jsonObject(with: casepaths, options: JSONSerialization.ReadingOptions.allowFragments) as! [String:NSObject]
+            if let site = g?["site"] as? String{
+                crashed = (g?["crashed"] as? [String])?.map({site + $0}).flatMap({URL(string:$0)})
+            }
+        }
+        
+        var expectations:[XCTestExpectation] = []
+        var dataTasks:[URLSessionDataTask] = []
+        
+        XCTAssertNotNil(crashed)
+        crashed?.forEach({ (url) in
+            let expectation = self.expectation(description: url.absoluteString)
+            let dt = URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
+                if let data = data{
+                    do {
+                        _ = try JSON(data)
+                    }catch let e as NSError{
+                        print("error: \(e.localizedDescription)")
+                    }
+                    expectation.fulfill()
+                }
+            })
+            expectations.append(expectation)
+            dataTasks.append(dt)
+        })
+        dataTasks.forEach({$0.resume()})
+        self.wait(for: expectations, timeout: 1000)
+    }
 
-
+    
+    
 }

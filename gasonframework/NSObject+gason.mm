@@ -29,17 +29,22 @@ const int SHIFT_WIDTH = 4;
         _jsonValue = JsonValue();
         _jsonAllocator = new JsonAllocator;
         if (data.length == 0){
-            _parseStatus = 1;
+            _parseStatus = JSON_BAD_STRING;
             _s = nil;
             return self;
         }
         char *tmp = strdup((char *) data.bytes);
         size_t l = strlen(tmp);
+        size_t ll = l + 1;
         if (l > 0){
-            _s = (char *) malloc(sizeof(char)*(l+1));
-            memset(_s, 0x00, sizeof(char)*(l+1));
-            memcpy(_s, tmp, sizeof(char)*l);
+            char last = tmp[l - 1];
+            if (last == '\0'){
+                --ll;
+            }
         }
+        _s = (char *) malloc(sizeof(char)*(ll));
+        memset(_s, 0x00, sizeof(char)*(ll));
+        memcpy(_s, tmp, sizeof(char)*l);
         free(tmp);
 
         _parseStatus = jsonParse(_s, &_endptr, &_jsonValue, *_jsonAllocator);

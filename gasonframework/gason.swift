@@ -22,7 +22,6 @@ open class JSON{
     }
     
     convenience init(json:String) throws {
-        
         guard let data = json.data(using: String.Encoding.utf8, allowLossyConversion: true) else {
             throw JSONErrorType.BAD_STRING
         }
