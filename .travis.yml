@@ -1,4 +1,4 @@
 osx_image: xcode9.1
 language: objective-c
 script:
-    - xcodebuild test -project gasonframework.xcodeproj -scheme gasonframework -destination 'platfrom=iOS,name=iPhone'
+    - xcodebuild test -project gasonframework.xcodeproj -scheme gasonframework -destination 'platfrom=iOS Simulator,name=iPhone 5,OS=9.0'
