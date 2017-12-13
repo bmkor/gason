@@ -35,7 +35,7 @@ class gasonframework_performanceTests: XCTestCase {
                 do{
                     _ = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
                 }catch let e as NSError{
-                    print("baseline: \(e.localizedDescription)")
+                    print("error: \(e.localizedDescription)")
                 }
                 
             })
@@ -52,7 +52,7 @@ class gasonframework_performanceTests: XCTestCase {
                 do{
                     _ = try JSON(data)
                 }catch let e as NSError{
-                    print("baseline: \(e.localizedDescription)")
+                    print("error: \(e.localizedDescription)")
                 }
             })
         }

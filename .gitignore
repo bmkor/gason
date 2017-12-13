@@ -1,6 +1,4 @@
 
 .DS_Store
 *.xcuserstate
-gasonframework.xcodeproj/project.xcworkspace/xcuserdata/sof22.xcuserdatad/UserInterfaceState.xcuserstate
-.DS_Store
-gasonframework.xcodeproj/project.xcworkspace/xcuserdata/sof22.xcuserdatad/UserInterfaceState.xcuserstate
+*/xcuserdata/*
