@@ -1,4 +1,4 @@
 osx_image: xcode9.1
 language: objective-c
 script:
-    - xcodebuild clean build -sdk iphonesimulator -project gasonframework.xcodeproj -scheme gasonframeworkTestsScheme build test CODE_SIGNING_REQUIRED=NO
+    - xcodebuild test -project gasonframework.xcodeproj -scheme gasonframework -destination 'platfrom=iOS,name=iPhone'
