@@ -2,3 +2,6 @@
 .DS_Store
 *.xcuserstate
 */xcuserdata/*
+gasonframework/.DS_Store
+gasonframework/ProjectModule/.DS_Store
+gasonframeworkTests/.DS_Store
