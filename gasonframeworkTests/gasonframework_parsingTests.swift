@@ -84,7 +84,7 @@ class gasonframework_parsingTests: XCTestCase {
             let expectation = self.expectation(description: url.absoluteString)
             let dt = URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 if let data = data{
-                    do {
+                    do {                        
                         _ = try JSON(data)
                         passed.append(url.lastPathComponent)
                         correctCnt += 1

@@ -8,19 +8,25 @@
 
 import Foundation
 /**
- JSON is a gason wrapper 
+ JSON is in fact a gason wrapper.
  */
-
 
 open class JSON{
     fileprivate var g:gason
+    
+    /**
+     Initialize JSON by NSData. Throw will occur if the data cannot be parsed as a valid JSON.
+     */
     public init(_ data:Data) throws {
         self.g = gason(data: data)
         let status = self.g.parseStatus
         guard status == 0 else{ throw JSONErrorType(rawValue:Int(status)) }
         return
     }
-    
+
+    /**
+     Initialize JSON by a string (Slower). The string will be converted to NSData for initialization.
+     */
     convenience init(json:String) throws {
         guard let data = json.data(using: String.Encoding.utf8, allowLossyConversion: true) else {
             throw JSONErrorType.BAD_STRING
@@ -33,30 +39,37 @@ open class JSON{
         self.g = g
     }
     
+    /**
+     Cast the JSON to a string.
+     */
     public var string:String?{
         get{
             return self.g.toString()
         }
     }
-    
+
+    /// Cast the JSON to a double.
     public var double:Double?{
         get{
             return self.g.toNumber()?.doubleValue
         }
     }
     
+    /// Cast the JSON to a bool.
     public var bool:Bool?{
         get{
             return self.g.toBool()?.boolValue
         }
     }
-    
+
+    /// Cast the JSON to an integer.
     public var int:Int?{
         get{
             return self.g.toNumber()?.intValue
         }
     }
     
+    /// Gives the length of the JSON if it is an array or an object.
     public var length:UInt?{
         get{
             return self.g.length()?.uintValue

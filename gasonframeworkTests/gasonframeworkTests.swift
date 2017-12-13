@@ -51,7 +51,7 @@ class gasonframeworkTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
             d.forEach({ (data) in
-                do{
+                do{                    
                     _ = try JSON(data)
                 }catch let e as NSError{
                     print("error: \(e.localizedDescription)")
@@ -78,6 +78,7 @@ class gasonframeworkTests: XCTestCase {
             let dt = URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 if let data = data{
                     do {
+                        
                         _ = try JSON(data)
                     }catch let e as NSError{
                         print("error: \(e.localizedDescription)")
