@@ -92,11 +92,12 @@ Pod::Spec.new do |s|
   #
 
   # s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
-  s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/source/*.{h,cpp}","gasonframework/ProjectModule/source/*.{h,mm}"
+  s.source_files  = "gasonframework", "gasonframework/*.{h,swift}", "gasonframework/ProjectModule/source/*.{cpp}","gasonframework/ProjectModule/*.{h,mm}"
   # s.exclude_files = "gasonframework/README.md", "gasonframework/*.podspec", "gasonframeworkTests"
 
+  # s.public_header_files = "gasonframework/ProjectModule/*.{h}"
   # s.public_header_files = "Classes/**/*.h"
-  s.public_header_files = "gasonframework/ProjectModule/source/*.h"
+  s.private_header_files = "gasonframework/ProjectModule/source/*.h"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -108,7 +109,6 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
+  # s.libraries =  "iconv", "xml2"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -10,7 +10,6 @@
 #define NSObject_gason_h
 #import <Foundation/Foundation.h>
 
-
 @interface gason:NSObject
 @property(nonatomic, assign) int parseStatus;
 - (nullable NSString *) toString;

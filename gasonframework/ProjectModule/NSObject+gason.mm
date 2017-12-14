@@ -8,7 +8,6 @@
 
 #import "NSObject+gason.h"
 #import "gason.h"
-
 const int SHIFT_WIDTH = 4;
 
 @interface gason ()
