@@ -17,7 +17,7 @@ open class JSON{
     /**
      Initialize JSON by NSData. Throw will occur if the data cannot be parsed as a valid JSON.
      */
-    public init(_ data:Data) throws {
+    public init(_ data:Data) throws {        
         self.g = gason(data: data)
         let status = self.g.parseStatus
         guard status == 0 else{ throw JSONErrorType(rawValue:Int(status)) }
