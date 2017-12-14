@@ -92,11 +92,12 @@ Pod::Spec.new do |s|
   #
 
   # s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
-  s.source_files  = "gasonframework", "gasonframework/*.{h,swift}", "gasonframework/ProjectModule/source/*.{h,cpp,mm}"
+  s.source_files  = "gasonframework", "gasonframework/**.{h,swift}", "gasonframework/ProjectModule/source/**.{h,cpp,mm}"
   # s.exclude_files = "gasonframework/README.md", "gasonframework/*.podspec", "gasonframeworkTests"
 
-  # s.public_header_files = "gasonframework/ProjectModule/*.h"
+  # s.public_header_files = "gasonframework/ProjectModule/source/*.h"
   s.private_header_files = "gasonframework/ProjectModule/**/*.h"
+  # s.private_header_files = "gasonframework/ProjectModule/**/*.h"
 
   s.module_map = "gasonframework/ProjectModule/module.modulemap"
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -111,6 +112,7 @@ Pod::Spec.new do |s|
   # s.resources = "Resources/*.png"
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
+  s.preserve_paths = "gasonframework/ProjectModule/module.modulemap"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -132,7 +134,6 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   # s.requires_arc = true
-
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
