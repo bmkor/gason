@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080864BB1FE267410013E1A0 /* NSObject+gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 080864B91FE267410013E1A0 /* NSObject+gason.h */; };
+		080864BC1FE267410013E1A0 /* NSObject+gason.mm in Sources */ = {isa = PBXBuildFile; fileRef = 080864BA1FE267410013E1A0 /* NSObject+gason.mm */; };
 		08115B031FDFE52100E685C3 /* gason.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08115B021FDFE52100E685C3 /* gason.cpp */; };
 		087FA48F1FDFC25B00A84E87 /* gasonframework_parsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FA48E1FDFC25B00A84E87 /* gasonframework_parsingTests.swift */; };
 		087FA4931FDFC4BB00A84E87 /* jsonlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 087FA4921FDFC4BB00A84E87 /* jsonlist.json */; };
-		087FA4941FDFD24400A84E87 /* gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16DA1FD251AE009E9170 /* gason.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		087FA4941FDFD24400A84E87 /* gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16DA1FD251AE009E9170 /* gason.h */; };
 		087FA4961FDFD2EF00A84E87 /* gasonframework_performanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FA48C1FDFC21800A84E87 /* gasonframework_performanceTests.swift */; };
 		087FA4981FDFD2F700A84E87 /* gasonframeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB16CC1FD2516E009E9170 /* gasonframeworkTests.swift */; };
 		4BEB16C81FD2516E009E9170 /* gasonframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEB16BE1FD2516E009E9170 /* gasonframework.framework */; };
 		4BEB16CF1FD2516E009E9170 /* gasonframework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16C11FD2516E009E9170 /* gasonframework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BEB16DC1FD251AF009E9170 /* NSObject+gason.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB16D91FD251AE009E9170 /* NSObject+gason.mm */; };
 		4BEB16DD1FD251AF009E9170 /* gason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB16DB1FD251AE009E9170 /* gason.swift */; };
-		4BEB16E11FD25218009E9170 /* NSObject+gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16D81FD251AE009E9170 /* NSObject+gason.h */; };
 		4BEB16E31FD25371009E9170 /* gasonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB16E21FD25371009E9170 /* gasonError.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		080864B91FE267410013E1A0 /* NSObject+gason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+gason.h"; sourceTree = "<group>"; };
+		080864BA1FE267410013E1A0 /* NSObject+gason.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+gason.mm"; sourceTree = "<group>"; };
 		08115B021FDFE52100E685C3 /* gason.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gason.cpp; sourceTree = "<group>"; };
 		087FA48C1FDFC21800A84E87 /* gasonframework_performanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gasonframework_performanceTests.swift; sourceTree = "<group>"; };
 		087FA48E1FDFC25B00A84E87 /* gasonframework_parsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gasonframework_parsingTests.swift; sourceTree = "<group>"; };
@@ -43,8 +45,6 @@
 		4BEB16C71FD2516E009E9170 /* gasonframeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gasonframeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEB16CC1FD2516E009E9170 /* gasonframeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gasonframeworkTests.swift; sourceTree = "<group>"; };
 		4BEB16CE1FD2516E009E9170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BEB16D81FD251AE009E9170 /* NSObject+gason.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+gason.h"; sourceTree = "<group>"; };
-		4BEB16D91FD251AE009E9170 /* NSObject+gason.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+gason.mm"; sourceTree = "<group>"; };
 		4BEB16DA1FD251AE009E9170 /* gason.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = gason.h; sourceTree = "<group>"; };
 		4BEB16DB1FD251AE009E9170 /* gason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gason.swift; sourceTree = "<group>"; };
 		4BEB16E21FD25371009E9170 /* gasonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gasonError.swift; sourceTree = "<group>"; };
@@ -72,6 +72,8 @@
 		08D318B11FDFE5AD00C8094A /* source */ = {
 			isa = PBXGroup;
 			children = (
+				080864B91FE267410013E1A0 /* NSObject+gason.h */,
+				080864BA1FE267410013E1A0 /* NSObject+gason.mm */,
 				4BEB16DA1FD251AE009E9170 /* gason.h */,
 				08115B021FDFE52100E685C3 /* gason.cpp */,
 			);
@@ -82,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				4B5EC9DD1FD2901E00BB9418 /* module.modulemap */,
-				4BEB16D81FD251AE009E9170 /* NSObject+gason.h */,
-				4BEB16D91FD251AE009E9170 /* NSObject+gason.mm */,
 				08D318B11FDFE5AD00C8094A /* source */,
 			);
 			path = ProjectModule;
@@ -146,9 +146,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				087FA4941FDFD24400A84E87 /* gason.h in Headers */,
+				080864BB1FE267410013E1A0 /* NSObject+gason.h in Headers */,
 				4BEB16CF1FD2516E009E9170 /* gasonframework.h in Headers */,
-				4BEB16E11FD25218009E9170 /* NSObject+gason.h in Headers */,
+				087FA4941FDFD24400A84E87 /* gason.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080864BC1FE267410013E1A0 /* NSObject+gason.mm in Sources */,
 				4BEB16DD1FD251AF009E9170 /* gason.swift in Sources */,
 				08115B031FDFE52100E685C3 /* gason.cpp in Sources */,
-				4BEB16DC1FD251AF009E9170 /* NSObject+gason.mm in Sources */,
 				4BEB16E31FD25371009E9170 /* gasonError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -92,13 +92,13 @@ Pod::Spec.new do |s|
   #
 
   # s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
-  s.source_files  = "gasonframework", "gasonframework/*.{h,swift}", "gasonframework/ProjectModule/source/*.{cpp}","gasonframework/ProjectModule/*.{h,mm}"
+  s.source_files  = "gasonframework", "gasonframework/*.{h,swift}", "gasonframework/ProjectModule/source/*.{h,cpp,mm}"
   # s.exclude_files = "gasonframework/README.md", "gasonframework/*.podspec", "gasonframeworkTests"
 
-  # s.public_header_files = "gasonframework/ProjectModule/*.{h}"
-  # s.public_header_files = "Classes/**/*.h"
-  s.private_header_files = "gasonframework/ProjectModule/source/*.h"
+  # s.public_header_files = "gasonframework/ProjectModule/*.h"
+  s.private_header_files = "gasonframework/ProjectModule/**/*.h"
 
+  s.module_map = "gasonframework/ProjectModule/module.modulemap"
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
@@ -121,7 +121,7 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  # s.library   = "iconv"
+  # s.library   = "c++"
   # s.libraries =  "iconv", "xml2"
 
 
