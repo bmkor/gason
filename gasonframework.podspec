@@ -92,11 +92,11 @@ Pod::Spec.new do |s|
   #
 
   # s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
-  s.source_files  = "gasonframework.xcodeproj", "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
+  s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/source/*.{h,cpp}","gasonframework/ProjectModule/source/*.{h,mm}"
   # s.exclude_files = "gasonframework/README.md", "gasonframework/*.podspec", "gasonframeworkTests"
 
   # s.public_header_files = "Classes/**/*.h"
-
+  s.public_header_files = "gasonframework/ProjectModule/source/*.h"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
