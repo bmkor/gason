@@ -10,7 +10,7 @@
 		08115B031FDFE52100E685C3 /* gason.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08115B021FDFE52100E685C3 /* gason.cpp */; };
 		087FA48F1FDFC25B00A84E87 /* gasonframework_parsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FA48E1FDFC25B00A84E87 /* gasonframework_parsingTests.swift */; };
 		087FA4931FDFC4BB00A84E87 /* jsonlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 087FA4921FDFC4BB00A84E87 /* jsonlist.json */; };
-		087FA4941FDFD24400A84E87 /* gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16DA1FD251AE009E9170 /* gason.h */; };
+		087FA4941FDFD24400A84E87 /* gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16DA1FD251AE009E9170 /* gason.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		087FA4961FDFD2EF00A84E87 /* gasonframework_performanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FA48C1FDFC21800A84E87 /* gasonframework_performanceTests.swift */; };
 		087FA4981FDFD2F700A84E87 /* gasonframeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB16CC1FD2516E009E9170 /* gasonframeworkTests.swift */; };
 		4BEB16C81FD2516E009E9170 /* gasonframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEB16BE1FD2516E009E9170 /* gasonframework.framework */; };
@@ -81,6 +81,9 @@
 		4B5EC9DC1FD28E7300BB9418 /* ProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				08D318B11FDFE5AD00C8094A /* source */,
+				4BEB16D81FD251AE009E9170 /* NSObject+gason.h */,
+				4BEB16D91FD251AE009E9170 /* NSObject+gason.mm */,
 				4B5EC9DD1FD2901E00BB9418 /* module.modulemap */,
 			);
 			path = ProjectModule;
@@ -108,13 +111,10 @@
 		4BEB16C01FD2516E009E9170 /* gasonframework */ = {
 			isa = PBXGroup;
 			children = (
-				08D318B11FDFE5AD00C8094A /* source */,
 				4BEB16C21FD2516E009E9170 /* Info.plist */,
 				4BEB16C11FD2516E009E9170 /* gasonframework.h */,
 				4BEB16DB1FD251AE009E9170 /* gason.swift */,
 				4BEB16E21FD25371009E9170 /* gasonError.swift */,
-				4BEB16D81FD251AE009E9170 /* NSObject+gason.h */,
-				4BEB16D91FD251AE009E9170 /* NSObject+gason.mm */,
 				4B5EC9DC1FD28E7300BB9418 /* ProjectModule */,
 			);
 			path = gasonframework;

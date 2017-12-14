@@ -1,5 +1,5 @@
-module gasonframework{
-    header "../NSObject+gason.h"
+module gasonframework{    
+    header "NSObject+gason.h"
     export *
 }
 

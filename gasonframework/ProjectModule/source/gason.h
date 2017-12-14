@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <assert.h>
-#include <string>
+#include <string.h>
 
 enum JsonTag {
     JSON_NUMBER = 0,
