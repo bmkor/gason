@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "gasonframework"
-  s.version      = "0.0.2"
+  s.version      = "0.0.1"
   s.summary      = "A light and fast JSON praser based on gason."
 
   # This description is used to generate tags and improve search results.
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #
 
   # s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
-  s.source_files  = "*"
+  s.source_files  = "gasonframework.xcodeproj", "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
   # s.exclude_files = "gasonframework/README.md", "gasonframework/*.podspec", "gasonframeworkTests"
 
   # s.public_header_files = "Classes/**/*.h"
