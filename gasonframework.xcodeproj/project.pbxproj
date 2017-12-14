@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		080864BB1FE267410013E1A0 /* NSObject+gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 080864B91FE267410013E1A0 /* NSObject+gason.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		080864BB1FE267410013E1A0 /* NSObject+gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 080864B91FE267410013E1A0 /* NSObject+gason.h */; };
 		080864BC1FE267410013E1A0 /* NSObject+gason.mm in Sources */ = {isa = PBXBuildFile; fileRef = 080864BA1FE267410013E1A0 /* NSObject+gason.mm */; };
 		08115B031FDFE52100E685C3 /* gason.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08115B021FDFE52100E685C3 /* gason.cpp */; };
 		087FA48F1FDFC25B00A84E87 /* gasonframework_parsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FA48E1FDFC25B00A84E87 /* gasonframework_parsingTests.swift */; };
 		087FA4931FDFC4BB00A84E87 /* jsonlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 087FA4921FDFC4BB00A84E87 /* jsonlist.json */; };
-		087FA4941FDFD24400A84E87 /* gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16DA1FD251AE009E9170 /* gason.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		087FA4941FDFD24400A84E87 /* gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16DA1FD251AE009E9170 /* gason.h */; };
 		087FA4961FDFD2EF00A84E87 /* gasonframework_performanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FA48C1FDFC21800A84E87 /* gasonframework_performanceTests.swift */; };
 		087FA4981FDFD2F700A84E87 /* gasonframeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB16CC1FD2516E009E9170 /* gasonframeworkTests.swift */; };
 		4BEB16C81FD2516E009E9170 /* gasonframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEB16BE1FD2516E009E9170 /* gasonframework.framework */; };
@@ -69,22 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08D318B11FDFE5AD00C8094A /* source */ = {
-			isa = PBXGroup;
-			children = (
-				4BEB16DA1FD251AE009E9170 /* gason.h */,
-				08115B021FDFE52100E685C3 /* gason.cpp */,
-			);
-			path = source;
-			sourceTree = "<group>";
-		};
 		4B5EC9DC1FD28E7300BB9418 /* ProjectModule */ = {
 			isa = PBXGroup;
 			children = (
 				4B5EC9DD1FD2901E00BB9418 /* module.modulemap */,
 				080864B91FE267410013E1A0 /* NSObject+gason.h */,
 				080864BA1FE267410013E1A0 /* NSObject+gason.mm */,
-				08D318B11FDFE5AD00C8094A /* source */,
+				4BEB16DA1FD251AE009E9170 /* gason.h */,
+				08115B021FDFE52100E685C3 /* gason.cpp */,
 			);
 			path = ProjectModule;
 			sourceTree = "<group>";
@@ -336,6 +328,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -390,6 +383,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -413,15 +407,12 @@
 				INFOPLIST_FILE = gasonframework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/gasonframework",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = nil.gasonframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/gasonframework/ProjectModule";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/gasonframework/ProjectModule/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,15 +435,12 @@
 				INFOPLIST_FILE = gasonframework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/gasonframework",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = nil.gasonframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/gasonframework/ProjectModule";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/gasonframework/ProjectModule/**";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -466,8 +454,10 @@
 				DEVELOPMENT_TEAM = 3AR4R964KR;
 				INFOPLIST_FILE = gasonframeworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = nil.gasonframeworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/gasonframework/ProjectModule/**";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,8 +471,10 @@
 				DEVELOPMENT_TEAM = 3AR4R964KR;
 				INFOPLIST_FILE = gasonframeworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = nil.gasonframeworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/gasonframework/ProjectModule/**";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

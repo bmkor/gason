@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "gasonframework"
-  s.version      = "0.0.1"
+  s.version      = "0.0.4"
   s.summary      = "A light and fast JSON praser based on gason."
 
   # This description is used to generate tags and improve search results.
@@ -91,15 +91,14 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # s.source_files  = "gasonframework", "gasonframework/*", "gasonframework/ProjectModule/*","gasonframework/source/*.{h,m,swift}"
-  s.source_files  = "gasonframework", "gasonframework/ProjectModule/source"
-  # s.exclude_files = "gasonframework/README.md", "gasonframework/*.podspec", "gasonframeworkTests"
+  s.source_files  = 'gasonframework/*.{h,swift}', 'gasonframework/ProjectModule/*.{h,cpp,mm}'
 
-  # s.public_header_files = "gasonframework/ProjectModule/source/*.h", "**.h"
-  # s.private_header_files = "gasonframework/ProjectModule/**/*.h", "*.h"
-  # s.private_header_files = "gasonframework/ProjectModule/**/*.h"
+  s.public_header_files = 'gasonframework/*.h'
 
-  s.module_map = "gasonframework/ProjectModule/module.modulemap"
+  s.pod_target_xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/gasonframework/gasonframework/ProjectModule/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/gasonframework/gasonframework/'}
+  s.xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/gasonframework/gasonframework/ProjectModule/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/gasonframework/gasonframework/'}
+
+  # s.module_map = 'gasonframework/ProjectModule/module.modulemap'
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
@@ -132,8 +131,7 @@ Pod::Spec.new do |s|
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-
-  # s.requires_arc = true
+  s.requires_arc = true
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 

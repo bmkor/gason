@@ -11,6 +11,7 @@ import Foundation
  JSON is in fact a gason wrapper.
  */
 
+
 open class JSON{
     fileprivate var g:gason
     
