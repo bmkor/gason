@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/bmkor/gason.svg?branch=0.0.1)](https://travis-ci.org/bmkor/gason)
 # gasonframework
 
 * Swift version of [gason](https://github.com/vivkin/gason) a fast C++ JSON parser
