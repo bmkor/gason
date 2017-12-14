@@ -72,8 +72,6 @@
 		08D318B11FDFE5AD00C8094A /* source */ = {
 			isa = PBXGroup;
 			children = (
-				080864B91FE267410013E1A0 /* NSObject+gason.h */,
-				080864BA1FE267410013E1A0 /* NSObject+gason.mm */,
 				4BEB16DA1FD251AE009E9170 /* gason.h */,
 				08115B021FDFE52100E685C3 /* gason.cpp */,
 			);
@@ -84,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				4B5EC9DD1FD2901E00BB9418 /* module.modulemap */,
+				080864B91FE267410013E1A0 /* NSObject+gason.h */,
+				080864BA1FE267410013E1A0 /* NSObject+gason.mm */,
 				08D318B11FDFE5AD00C8094A /* source */,
 			);
 			path = ProjectModule;
