@@ -1,0 +1,14 @@
+framework module gasonframework{
+
+    umbrella header "gasonframework.h"
+
+    export *
+    module * { export  * }
+
+    explicit module gason{
+        header "NSObject+gason.h"
+    }
+
+}
+
+

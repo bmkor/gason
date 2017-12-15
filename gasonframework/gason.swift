@@ -11,6 +11,7 @@ import Foundation
  JSON is in fact a gason wrapper.
  */
 
+import gasonframework.gason
 
 open class JSON{
     fileprivate var g:gason
@@ -20,6 +21,7 @@ open class JSON{
      */
     public init(_ data:Data) throws {        
         self.g = gason(data: data)
+        
         let status = self.g.parseStatus
         guard status == 0 else{ throw JSONErrorType(rawValue:Int(status)) }
         return
