@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/bmkor/gason"
-  s.license      = { :type => "MIT"}
+  s.license      = { :type => "MIT", :file => "LICENSE"}
   s.author       = { "Benjamin" => "orbenappdev@gmail.com" }
 
   s.platform     = :ios
