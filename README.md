@@ -1,4 +1,4 @@
-[![Build Status][![Build Status](https://travis-ci.org/bmkor/gason.svg?branch=master)](https://travis-ci.org/bmkor/gason) ![Pod](https://cocoapod-badges.herokuapp.com/v/gasonframework/badge.png)
+[![Build Status](https://travis-ci.org/bmkor/gason.svg?branch=master)](https://travis-ci.org/bmkor/gason) ![Pod](https://cocoapod-badges.herokuapp.com/v/gasonframework/badge.png)
 # gasonframework
 
 * Swift framework built on [gason](https://github.com/vivkin/gason)
