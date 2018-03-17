@@ -61,9 +61,9 @@ Just change `'YOUR AWESOME APPNAME'` to your app name and then type `pod install
 Alternatively, you may just clone this repo, build the framework yourself and import the framework to your project.
 
 # Documentation?
-This gason wrapper is intended to be simple and straightforward. I would like to give a sample usage as below. In case, you need more, just open an issue.
+This gason wrapper is intended to be simple and straightforward. I would like to give a sample below. In case, you need more, just open an issue.
 
-A sample usage demo:
+A sample:
 ```
 import UIKit
 import gasonframework
