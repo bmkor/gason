@@ -19,7 +19,8 @@ class gasonframework_performanceTests: XCTestCase {
         // This may take a bit time to download.
         
         let testURL = "https://raw.githubusercontent.com/Newbilius/big_json_import_demo/master/test_data/"
-        d = ["big.json","very_big.json","small.json"].flatMap({URL(string:testURL + $0)}).flatMap({try? Data(contentsOf: $0)})
+        //d = ["big.json","very_big.json","small.json"].flatMap({URL(string:testURL + $0)}).flatMap({try? Data(contentsOf: $0)})
+        d = ["small.json"].flatMap({URL(string:testURL + $0)}).flatMap({try? Data(contentsOf: $0)})
     }
     
     override func tearDown() {

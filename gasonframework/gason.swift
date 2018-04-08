@@ -102,7 +102,7 @@ extension JSON:CustomStringConvertible{
 }
 
 extension JSON{
-    subscript(i:UInt)->JSON?{
+    public subscript(i:UInt)->JSON?{
         get{
             guard let gg = self.g[i] else {
                 return nil
@@ -111,7 +111,7 @@ extension JSON{
         }
     }
     
-    subscript(key:String)->JSON?{
+    public subscript(key:String)->JSON?{
         get{
             guard let gg = self.g[key] else{
                 return nil

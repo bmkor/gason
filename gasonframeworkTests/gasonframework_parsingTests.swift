@@ -46,7 +46,8 @@ class gasonframework_parsingTests: XCTestCase {
             let dt = URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 if let data = data{
                     do {
-                        _ = try JSON(data)
+                        _ = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+//                        _ = try JSON(data)
                         passed.append(url.lastPathComponent)
                     }catch let e as NSError{
                         correctCnt += 1
@@ -85,7 +86,8 @@ class gasonframework_parsingTests: XCTestCase {
             let dt = URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 if let data = data{
                     do {                        
-                        _ = try JSON(data)
+//                        _ = try JSON(data)
+                        _ = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
                         passed.append(url.lastPathComponent)
                         correctCnt += 1
                     }catch let e as NSError{
@@ -119,7 +121,8 @@ class gasonframework_parsingTests: XCTestCase {
             let dt = URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 if let data = data{
                     do {
-                        _ = try JSON(data)
+//                        _ = try JSON(data)
+                        _ = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
                         passed.append(url.lastPathComponent)
                         
                     }catch let e as NSError{
