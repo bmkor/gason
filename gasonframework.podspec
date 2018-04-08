@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "gasonframework"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A light and fast JSON praser built on gason."
   s.description  = <<-DESC
   A light and fast JSON parser built on gason. More information on gason can be found in https://github.com/vivkin/gason.
