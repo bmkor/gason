@@ -119,5 +119,19 @@ extension JSON{
             return JSON(g:gg)
         }
     }
+
+    public var keys:[String]?{
+        var k:[String] = []
+        while let kk = self.next()?.key {
+            k.append(kk)
+        }
+        return k.count > 0 ? k : nil
+    }
+    
+    public var key:String?{
+        get{
+            return self.g.getKey()
+        }
+    }
     
 }

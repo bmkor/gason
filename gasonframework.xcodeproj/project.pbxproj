@@ -12,7 +12,6 @@
 		08115B031FDFE52100E685C3 /* gason.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08115B021FDFE52100E685C3 /* gason.cpp */; };
 		087FA4931FDFC4BB00A84E87 /* jsonlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 087FA4921FDFC4BB00A84E87 /* jsonlist.json */; };
 		087FA4941FDFD24400A84E87 /* gason.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16DA1FD251AE009E9170 /* gason.h */; };
-		4B132C41205D09AE00604B13 /* gasonframework_parsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FA48E1FDFC25B00A84E87 /* gasonframework_parsingTests.swift */; };
 		4BEB16C81FD2516E009E9170 /* gasonframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEB16BE1FD2516E009E9170 /* gasonframework.framework */; };
 		4BEB16CF1FD2516E009E9170 /* gasonframework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEB16C11FD2516E009E9170 /* gasonframework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BEB16DD1FD251AF009E9170 /* gason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB16DB1FD251AE009E9170 /* gason.swift */; };
@@ -254,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B132C41205D09AE00604B13 /* gasonframework_parsingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
