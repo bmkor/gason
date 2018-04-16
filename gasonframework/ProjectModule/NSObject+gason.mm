@@ -100,6 +100,14 @@ const int SHIFT_WIDTH = 4;
     }
 }
 
+- (BOOL) isArray{
+    return _jsonValue.getTag() == JSON_ARRAY;
+}
+
+- (BOOL) isObject{
+    return _jsonValue.getTag() == JSON_OBJECT;
+}
+
 - (nonnull instancetype) initWithJsonValue:(JsonValue) v{
     self = [super init];
     if (self){

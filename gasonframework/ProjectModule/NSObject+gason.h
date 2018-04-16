@@ -23,6 +23,8 @@
 - (nonnull instancetype) initWithJSON:(nonnull NSString *) json;
 - (nonnull instancetype) initWithData:(nonnull NSData *) data;
 - (nonnull NSString *) dumpValue:(int) indent;
+- (BOOL) isArray;
+- (BOOL) isObject;
 
 @end
 

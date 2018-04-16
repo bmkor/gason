@@ -120,6 +120,18 @@ extension JSON{
         }
     }
 
+    public var isArray:Bool{
+        get{
+            return self.isArray
+        }
+    }
+    
+    public var isObject:Bool{
+        get{
+            return self.isObject
+        }
+    }
+    
     public var keys:[String]?{
         var k:[String] = []
         while let kk = self.next()?.key {
